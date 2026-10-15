@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Website</title>
-</head>
-<body>
-  <h1>My website is online!</h1>
-  <p>Netlify is working.</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Grab Supplier</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="stage">
+      <div class="phone" id="phone">
+        <div class="status-bar">
+          <span id="clock">09:41</span>
+          <span class="notch"></span>
+          <span class="status-icons">▮▮▮ 4G 🔋</span>
+        </div>
+
+        <main class="screen" id="app"></main>
+
+        <nav class="tabbar" id="tabbar" hidden>
+          <button data-nav="home" class="tab active">
+            <span class="tab-ico">⌂</span><span>Home</span>
+          </button>
+          <button data-nav="supplier" class="tab">
+            <span class="tab-ico">🛒</span><span>Supplier</span>
+          </button>
+          <button data-nav="group" class="tab">
+            <span class="tab-ico">🤝</span><span>Group Buy</span>
+          </button>
+          <button data-nav="recipes" class="tab">
+            <span class="tab-ico">🍜</span><span>Menus</span>
+          </button>
+          <button data-nav="ledger" class="tab">
+            <span class="tab-ico">🏦</span><span>Books</span>
+          </button>
+        </nav>
+      </div>
+    </div>
+
+    <div class="sheet" id="sheet" hidden>
+      <div class="sheet-backdrop" data-close-sheet></div>
+      <div class="sheet-card" id="sheetCard"></div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
